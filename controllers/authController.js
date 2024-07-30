@@ -113,7 +113,7 @@ const generateAccessToken = (data) => {
       //return res.status(401).send("Refresh Token in Cookies Is Required");
       return res.send(error(401,'Refresh Token in Cookies Is Required'));
     }
-    const refreshToken =cookies.jwt
+    const refreshToken = cookies.jwt
     console.log('refreshToken',refreshToken);
     try {
       const decoded = jwt.verify(
