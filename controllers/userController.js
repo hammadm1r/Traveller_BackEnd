@@ -195,7 +195,7 @@ const updateUserProfile = async(req,res) =>{
 }
     const getUserProfile = async(req,res)=>{
         try {
-            const userId = req._id;
+            const userId = req.body.userId;
             console.log(userId);
             if (!userId) {
                 return res.status(400).send({ success: false, message: "User ID is required" });
